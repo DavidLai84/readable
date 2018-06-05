@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Post({ post, onUpvote, onDownvote, onDelete }) {
+export default function Post({ post, onUpvote, onDownvote, onDelete, countComments }) {
   return (
     <div
       className="card"
@@ -38,7 +38,7 @@ export default function Post({ post, onUpvote, onDownvote, onDelete }) {
           <div style={{ fontSize: '14px' }}>
             <p className="is-pulled-left">
               <i className="fa fa-comment" style={{ color: '#000088'}} />
-              &nbsp;[ {post.commentCount} ]
+              &nbsp;[ {countComments} ]
             </p>
             <p
               className="is-pulled-right"

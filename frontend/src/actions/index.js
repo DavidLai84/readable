@@ -1,43 +1,37 @@
-import * as ActionType from './types'
+export const RECEIVE_POST = 'RECEIVE_POST'
+export const RECEIVE_POSTS = 'RECEIVE_POSTS'
+export const DELETE_POST = 'DELETE_POST'
 
-export function receivePost(post) {
-  return {
-    type: ActionType.RECEIVE_POST,
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT'
+export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS'
+export const DELETE_COMMENT = 'DELETE_COMMENT'
+
+export const receivePost = post => ({
+    type: RECEIVE_POST,
     post,
-  }
-}
+});
 
-export function receivePosts(posts) {
-  return {
-    type: ActionType.RECEIVE_POSTS,
+export const receivePosts = posts => ({
+    type: RECEIVE_POSTS,
     posts,
-  }
-}
+});
 
-export function postDeleted(post) {
-  return {
-    type: ActionType.DELETE_POST,
+export const postDeleted = post => ({
+    type: DELETE_POST,
     post,
-  }
-}
+});
 
-export function receiveComment(comment) {
-  return {
-    type: ActionType.RECEIVE_COMMENT,
+export const receiveComment = comment => ({
+    type: RECEIVE_COMMENT,
     comment,
-  }
-}
+});
 
-export function receiveComments(comments) {
-  return {
-    type: ActionType.RECEIVE_COMMENTS,
+export const receiveComments = comments => ({
+    type: RECEIVE_COMMENTS,
     comments,
-  }
-}
+});
 
-export function commentDeleted(comment) {
-  return {
-    type: ActionType.DELETE_COMMENT,
+export const commentDeleted = comment => ({
+    type: DELETE_COMMENT,
     comment,
-  }
-}
+});

@@ -54,7 +54,7 @@ class PostList extends Component {
   }
   render() {
     const { posts } = this.props
-
+	
     posts.sort(sortBy(this.state.sortBy))
 
     return (
@@ -99,6 +99,7 @@ class PostList extends Component {
               </div>
             </nav>
             {posts.map(post => (
+			
               <Post
                 key={post.id}
                 post={post}

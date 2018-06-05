@@ -64,12 +64,12 @@ class Comment extends Component {
                 </a>
                 &nbsp;
                 <i
-                  className="fa fa-heartbeat"
+                  className="fa fa-heart"
                   style={{
                     color:
                       voteScore === 0
                         ? 'gray'
-                        : voteScore > 0 ? 'green' : 'red',
+                        : voteScore > 0 ? 'red' : 'black',
                   }}
                 />
                 {voteScore}

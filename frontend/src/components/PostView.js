@@ -186,7 +186,8 @@ class PostView extends Component {
     const { post } = this.props
     const date = new Date(post.timestamp).toLocaleDateString()
     const category = this.props.match.params.category
-
+	const countComments = post.comments.length
+	
     post.comments.sort(sortBy('-voteScore'))
 
     return (
@@ -243,7 +244,7 @@ class PostView extends Component {
             >
               <p className="is-pulled-left">
                 <i className="fa fa-comment" style={{ color: '#000088'}} />
-                &nbsp;[ {post.commentCount} ]
+                &nbsp;[ {countComments} ]
               </p>
               <p
                 className="is-pulled-right"
@@ -279,12 +280,12 @@ class PostView extends Component {
 
         <section className="section">
           <div className="container">
-            <h1 className="title">Comments ({post.commentCount})</h1>
+            <h1 className="title">Comments ({countComments})</h1>
             <hr />
 
             <div className="columns">
               <div className="column">
-                {!post.commentCount
+                {countComments === 0
                   ? 'No comments yet.'
                   : post.comments.map(comment => (
                       <Comment

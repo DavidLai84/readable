@@ -2,7 +2,7 @@ import {
   RECEIVE_POSTS,
   RECEIVE_POST,
   DELETE_POST
-} from '../actions/types'
+} from '../actions'
 
 const initialPostState = {
   posts: [],
